@@ -1,5 +1,5 @@
   <!DOCTYPE html>
-  <html lang="zh-CN"  
+  <html lang="en"  
       data-theme-mode="auto"
   >
   <head>
@@ -9,7 +9,7 @@
   
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_ex15nbittbh';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://luohengallen.github.io';window.REIMU_CONFIG.relative = '/';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
   <title>
-    归档 | 洛蘅的个人空间
+    Lie Group &amp; Lie Algebra Chap-2 | 洛蘅的个人空间
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
@@ -45,7 +45,7 @@
            M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
           </svg>
       </div>
-      <div class="loading-word">少女祈祷中...</div>
+      <div class="loading-word">Loading...</div>
     </div>
   </div>
   <script>
@@ -84,44 +84,44 @@
       <div id="wrap">
         <div id="header-nav">
   <nav id="main-nav" aria-label="Primary navigation">
-        <a class="main-nav-link-wrap" href="/">
+        <a class="main-nav-link-wrap" href="/en/">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">首页</span>
+          <span class="main-nav-link">Home</span>
         </a>
-        <a class="main-nav-link-wrap" href="/archives">
+        <a class="main-nav-link-wrap" href="/en/archives">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">归档</span>
+          <span class="main-nav-link">Archives</span>
         </a>
-        <a class="main-nav-link-wrap" href="/about">
+        <a class="main-nav-link-wrap" href="/en/about">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">关于</span>
+          <span class="main-nav-link">About</span>
         </a>
-        <a class="main-nav-link-wrap" href="/friend">
+        <a class="main-nav-link-wrap" href="/en/friend">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">友链</span>
+          <span class="main-nav-link">Friend</span>
         </a>
     <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation">
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a>
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed" target="_blank"></a>
   </nav>
     <nav id="i18n-nav" aria-label="Language selection">
       <div class="custom-dropdown">
         <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
           <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
-          <span id="selected-lang">简体中文</span>
+          <span id="selected-lang">English</span>
         </div>
         <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
-            <li data-value="zh-CN" role="option" class="selected" aria-selected="true">简体中文</li>
-            <li data-value="en" role="option" aria-selected="false">English</li>
+            <li data-value="zh-CN" role="option" aria-selected="false">简体中文</li>
+            <li data-value="en" role="option" class="selected" aria-selected="true">English</li>
         </ul>
       </div>
       <script>
@@ -139,8 +139,8 @@
         selectOptions.forEach((item) => {
           item.addEventListener("click", () => {
             const langMap = {};
-              langMap['zh-CN'] = '/archives/';
-              langMap['en'] = '/en/archives/';
+              langMap['zh-CN'] = '/2026/06/01/LieGroupChap2/';
+              langMap['en'] = '/en/2026/06/01/LieGroupChap2/';
             selectedLang.textContent = item.textContent;
             selectItems.classList.remove("show");
             selectOptions.forEach((option) => {
@@ -161,13 +161,12 @@
     </nav>
 </div>
 <header id="header" aria-label="Site header">
-      <picture>
-      </picture>
-        <img  fetchpriority="high" src="/images/bg.jpg" alt="">
+    <picture></picture>
+    <img  fetchpriority="high" src="/images/banner.webp" alt="Lie Group &amp; Lie Algebra Chap-2">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">归档</h1>
+            <h1 data-aos="slide-up">Lie Group &amp; Lie Algebra Chap-2</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
         </h2>
@@ -177,25 +176,30 @@
 
         <div id="content" aria-label="Page content"  class="sidebar-right" >
           <aside id="sidebar" aria-label="Sidebar">
-  <div class="sidebar-wrapper-container ">
+  <div class="sidebar-wrapper-container sticky">
   <div class="sidebar-wrapper">
     <div class="sidebar-wrap" data-aos="fade-up">
-        <div class="sidebar-author">
+          <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/head.jpg" data-sizes="auto" alt="洛蘅" class="lazyload">
   <div class="sidebar-author-name">洛蘅</div>
   <div class="sidebar-description">迎风奔跑，越过瓦砾！</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>文章</div>
+    <div>Post</div>
     <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
-    <div>分类</div>
+    <div>Category</div>
     <div class="sidebar-state-number">5</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>标签</div>
+    <div>Tag</div>
     <div class="sidebar-state-number">7</div>
   </div>
 </div>
@@ -206,35 +210,39 @@
 </div>
 <div class="sidebar-menu">
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">首页</div>
+        <div class="sidebar-menu-link">Home</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">归档</div>
+        <div class="sidebar-menu-link">Archives</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">关于</div>
+        <div class="sidebar-menu-link">About</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">友链</div>
+        <div class="sidebar-menu-link">Friend</div>
       </div>
 </div>
-
+</div>
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
     </div>
   </div>
   <div class="sidebar-widget">
@@ -242,109 +250,49 @@
   </div>
 </aside>
 
-          <section id="main" aria-label="Main content"><div class="archives-outer-wrap" data-aos="fade-up">
-    <div class="tag-wrap">
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/Lie%E7%BE%A4%EF%BC%8CLie%E4%BB%A3%E6%95%B0%EF%BC%8C%E7%BE%A4%E8%AE%BA/">Lie群，Lie代数，群论</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/Lie-group/">Lie group</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/Lie-algebra/">Lie algebra</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/QFT/">QFT</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/physics/">physics</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/">量子场论</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/%E7%89%A9%E7%90%86/">物理</a>
-    </div>
+          <section id="main" aria-label="Main content"><article id="post-Lie-Group-Chap2-en" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link icon-calendar" data-aos="zoom-in">
+    <time datetime="2026-05-31T21:39:19.000Z" itemprop="datePublished">2026-06-01</time>
+    <time style="display: none;" id="post-update-time">2026-06-02</time>
+  </span>
 </div>
-<div class="category-wrap">
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8CAI%E8%BD%AC%E7%A0%81%E7%89%88%E6%9C%AC/">学习笔记，AI转码版本</a>
+
     </div>
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/Study-note/">Study note</a>
-    </div>
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/study-note/">study note</a>
-    </div>
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-    </div>
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/Study-note/AI-transform-version/">AI transform version</a>
-    </div>
+    
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+        <p>This series of notes were generated by AI from handwritten content. They might not be very accurate because the I was in a rush to complete the task. There was no time to make detailed revisions. Once the progress is updated later, they will be much better.</p>
+<div style="text-align: center; margin: 20px 0;">
+    <iframe src="/pdfs/Lie-Group-Chap2.pdf" width="100%" height="800px" style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </iframe>
 </div>
-        <section class="archives-wrap" data-aos="fade-up">
-          <div class="archive-year-wrap">
-            <a href="/archives/2026" class="archive-year">2026</a>
-          </div>
-          <ul>
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-05-31T21:39:19.000Z" itemprop="datePublished">06-01</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/06/01/LieGroupChap2/">Lie群&amp;Lie代数笔记 第二章 矩阵群</a>
-</li>
+<p>👉 <a href="/pdfs/Lie-Group-Chap2.pdf">Click here to download PDF</a></p>
 
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-05-31T18:41:22.000Z" itemprop="datePublished">06-01</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/06/01/LieGroupChap1/">Lie群&amp;Lie代数笔记 第一章 群的基本概念和性质</a>
-</li>
+    </div>
+    <footer class="article-footer">
+        <a class="article-category-link" href="/en/categories/Study-note/" title="Study note" data-aos="zoom-in">Study note</a><a class="article-category-link" href="/en/categories/Study-note/AI-transform-version/" title="AI transform version" data-aos="zoom-in">AI transform version</a>
 
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-05-30T16:02:01.000Z" itemprop="datePublished">05-31</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/05/31/QFT2Chap3/">第三章：非阿贝尔规范场</a>
-</li>
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/Lie-algebra/" rel="tag" title="Lie algebra">Lie algebra</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/en/tags/Lie-group/" rel="tag" title="Lie group">Lie group</a></li></ul>
 
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-05-30T16:02:00.000Z" itemprop="datePublished">05-31</time>
-    </span>
+    </footer>
   </div>
-    <a class="archive-article-title" href="/2026/05/31/QFT2Chap2/">第二章：重整化</a>
-</li>
+    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
+    <div class="article-nav-link-wrap right">
+        <img data-src="/images/skd.jpg" data-sizes="auto" alt="Lie Group &amp; Lie Algebra Chap-1" class="lazyload">
+      <a href="/en/2026/06/01/LieGroupChap1/" aria-label="Next: Lie Group &amp; Lie Algebra Chap-1"  title="Next: Lie Group &amp; Lie Algebra Chap-1"></a>
+      <div class="article-nav-caption">Next</div>
+      <h3 class="article-nav-title">
+          Lie Group &amp; Lie Algebra Chap-1
+      </h3>
+    </div>
+  </nav>
 
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-05-30T16:01:00.000Z" itemprop="datePublished">05-31</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/05/31/QFT2Chap1/">第一章：路径积分</a>
-</li>
+</article>
 
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-05-30T16:00:00.000Z" itemprop="datePublished">05-31</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/05/31/QFT2cata/">QFT II 笔记目录</a>
-</li>
-
-          </ul>
-        </section>
-  </div>
 
 </section>
         </div>
@@ -360,7 +308,7 @@
       洛蘅
     </div>
       <div>
-        基于&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
         Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
       </div>
       <div>
@@ -372,10 +320,10 @@
       </div>
       <div>
         <span class="icon-eye"></span>
-        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
         &nbsp;|&nbsp;
         <span class="icon-user"></span>
-        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
       </div>
   </div>
 </footer>
@@ -388,22 +336,27 @@
       </div>
       <nav id="mobile-nav" aria-label="Mobile navigation">
   <div class="sidebar-wrap">
-      <div class="sidebar-author">
+        <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/head.jpg" data-sizes="auto" alt="洛蘅" class="lazyload">
   <div class="sidebar-author-name">洛蘅</div>
   <div class="sidebar-description">迎风奔跑，越过瓦砾！</div>
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>文章</div>
+    <div>Post</div>
     <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
-    <div>分类</div>
+    <div>Category</div>
     <div class="sidebar-state-number">5</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>标签</div>
+    <div>Tag</div>
     <div class="sidebar-state-number">7</div>
   </div>
 </div>
@@ -414,36 +367,40 @@
 </div>
 <div class="sidebar-menu">
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">首页</div>
+        <div class="sidebar-menu-link">Home</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">归档</div>
+        <div class="sidebar-menu-link">Archives</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">关于</div>
+        <div class="sidebar-menu-link">About</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">友链</div>
+        <div class="sidebar-menu-link">Friend</div>
       </div>
 </div>
-
+</div>
   </div>
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
 </nav>
 
     </div>
@@ -501,6 +458,49 @@
 
 <div id="lazy-script">
   <div>
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "洛蘅",
+          title: "Lie Group &amp; Lie Algebra Chap-2",
+          url: "https://luohengallen.github.io/2026/06/01/LieGroupChap2/",
+          excerpt: "",
+          description: "",
+          stripContent: "This series of notes were generated by AI from handwritten content. They might not be very accurate because the I was in a rush to complete the task. There was no time to make detailed revisions. Once the progress is updated later, they will be much ",
+          date: "Mon Jun 01 2026 05:39:19 GMT+0800",
+          updated: "Tue Jun 02 2026 02:19:12 GMT+0800",
+          cover: "/images/banner.webp",
+        };
+      </script>
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+<script src="/js/tabs.js" data-pjax defer></script>
+
+      <script type="module" data-pjax>
+        (async () => {
+          const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+          const initPswp = (gallery, children) => {
+            if (_$$(`${gallery} ${children}`).length > 0) {
+              new PhotoSwipeLightbox({
+                gallery,
+                children,
+                pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+              }).init();
+            }
+          }
+          const pswp = () => {
+            initPswp('.article-entry', 'a.article-gallery-item');
+            initPswp('.article-gallery', 'a.article-gallery-item');
+          }
+          pswp();
+        })();
+      </script>
+        
+
+
   </div>
 </div>
 

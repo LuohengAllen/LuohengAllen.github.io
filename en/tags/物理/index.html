@@ -7,9 +7,9 @@
   
   
   
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_ex15nbittbh';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = 'All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://luohengallen.github.io';window.REIMU_CONFIG.relative = '/';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_ex15nbittbh';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://luohengallen.github.io';window.REIMU_CONFIG.relative = '/';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
   <title>
-    第一章：路径积分 | 洛蘅的个人空间
+    Tag: 物理 | 洛蘅的个人空间
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
@@ -84,45 +84,93 @@
       <div id="wrap">
         <div id="header-nav">
   <nav id="main-nav" aria-label="Primary navigation">
-        <a class="main-nav-link-wrap" href="/">
+        <a class="main-nav-link-wrap" href="/en/">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">主页</span>
+          <span class="main-nav-link">Home</span>
         </a>
-        <a class="main-nav-link-wrap" href="/archives">
+        <a class="main-nav-link-wrap" href="/en/archives">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">文章和链接</span>
+          <span class="main-nav-link">Archives</span>
         </a>
-        <a class="main-nav-link-wrap" href="/about">
+        <a class="main-nav-link-wrap" href="/en/about">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">关于我</span>
+          <span class="main-nav-link">About</span>
         </a>
-        <a class="main-nav-link-wrap" href="/friend">
+        <a class="main-nav-link-wrap" href="/en/friend">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">博客主题下载</span>
+          <span class="main-nav-link">Friend</span>
         </a>
     <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation">
       <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed" target="_blank"></a>
   </nav>
+    <nav id="i18n-nav" aria-label="Language selection">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">English</span>
+        </div>
+        <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
+            <li data-value="zh-CN" role="option" aria-selected="false">简体中文</li>
+            <li data-value="en" role="option" class="selected" aria-selected="true">English</li>
+        </ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+          var expanded = selectSelected.getAttribute("aria-expanded") === "true";
+          selectSelected.setAttribute("aria-expanded", (!expanded).toString());
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};
+              langMap['zh-CN'] = '/tags/物理/';
+              langMap['en'] = '/en/tags/物理/';
+            selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+            selectSelected.setAttribute("aria-expanded", "false");
+          }
+        });
+      </script>
+    </nav>
 </div>
 <header id="header" aria-label="Site header">
-    <picture></picture>
-    <img  fetchpriority="high" src="/images/eva1.jpg" alt="第一章：路径积分">
+      <picture>
+      </picture>
+        <img  fetchpriority="high" src="/images/bg.jpg" alt="">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">第一章：路径积分</h1>
+            <h1 data-aos="slide-up">Tags</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
+              <span id="subtitle">物理</span>
         </h2>
     </div>
   </div>
@@ -130,15 +178,10 @@
 
         <div id="content" aria-label="Page content"  class="sidebar-right" >
           <aside id="sidebar" aria-label="Sidebar">
-  <div class="sidebar-wrapper-container sticky">
+  <div class="sidebar-wrapper-container ">
   <div class="sidebar-wrapper">
     <div class="sidebar-wrap" data-aos="fade-up">
-          <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
-<div class="sidebar-toc-wrapper toc-div-class" >
-    
-</div>
-</div>
-          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+        <div class="sidebar-author">
   <img data-src="/avatar/head.jpg" data-sizes="auto" alt="洛蘅" class="lazyload">
   <div class="sidebar-author-name">洛蘅</div>
   <div class="sidebar-description">迎风奔跑，越过瓦砾！</div>
@@ -146,15 +189,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>Post</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
     <div>Category</div>
-    <div class="sidebar-state-number">2</div>
+    <div class="sidebar-state-number">5</div>
   </div>
   <div class="sidebar-state-tag">
     <div>Tag</div>
-    <div class="sidebar-state-number">3</div>
+    <div class="sidebar-state-number">7</div>
   </div>
 </div>
 <div class="sidebar-social" >
@@ -164,39 +207,35 @@
 </div>
 <div class="sidebar-menu">
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="主页"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">主页</div>
+        <div class="sidebar-menu-link">Home</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="文章和链接"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">文章和链接</div>
+        <div class="sidebar-menu-link">Archives</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于我"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">关于我</div>
+        <div class="sidebar-menu-link">About</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="博客主题下载"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">博客主题下载</div>
+        <div class="sidebar-menu-link">Friend</div>
       </div>
 </div>
-</div>
-          <div class="sidebar-btn-wrapper" style="position:static">
-            <div class="sidebar-toc-btn current"></div>
-            <div class="sidebar-common-btn"></div>
-          </div>
+
     </div>
   </div>
   <div class="sidebar-widget">
@@ -204,57 +243,91 @@
   </div>
 </aside>
 
-          <section id="main" aria-label="Main content"><article id="post-QFT-II-Note-chap1" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-inner" data-aos="fade-up">
-    <div class="article-meta">
-      <div class="article-date">
-  <span class="article-date-link icon-calendar" data-aos="zoom-in">
-    <time datetime="2026-05-30T16:01:00.000Z" itemprop="datePublished">2026-05-31</time>
-    <time style="display: none;" id="post-update-time">2026-05-31</time>
-  </span>
-</div>
-
+          <section id="main" aria-label="Main content"><div class="archives-outer-wrap" data-aos="fade-up">
+    <div class="tag-wrap">
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/en/tags/Lie%E7%BE%A4%EF%BC%8CLie%E4%BB%A3%E6%95%B0%EF%BC%8C%E7%BE%A4%E8%AE%BA/">Lie群，Lie代数，群论</a>
     </div>
-    
-    <div class="hr-line"></div>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-        <p>第一章路径积分已经更新完了，这个笔记主要是follow我们上课讲义，以及Peskin教材</p>
-<div style="text-align: center; margin: 20px 0;">
-    <iframe src="/pdfs/QFT-II-Note-chap1.pdf" width="100%" height="800px" style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-    </iframe>
-</div>
-<p>👉 <a href="/pdfs/QFT-II-Note-chap1.pdf">点击这里下载 PDF</a></p>
-
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/en/tags/Lie-group/">Lie group</a>
     </div>
-    <footer class="article-footer">
-        <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="学习笔记" data-aos="zoom-in">学习笔记</a>
-
-        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E7%89%A9%E7%90%86/" rel="tag" title="物理">物理</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/" rel="tag" title="量子场论">量子场论</a></li></ul>
-
-    </footer>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/en/tags/Lie-algebra/">Lie algebra</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/en/tags/QFT/">QFT</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/en/tags/physics/">physics</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/en/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/">量子场论</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/en/tags/%E7%89%A9%E7%90%86/">物理</a>
+    </div>
+</div>
+<div class="category-wrap">
+    <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/en/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8CAI%E8%BD%AC%E7%A0%81%E7%89%88%E6%9C%AC/">学习笔记，AI转码版本</a>
+    </div>
+    <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/en/categories/Study-note/">Study note</a>
+    </div>
+    <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/en/categories/study-note/">study note</a>
+    </div>
+    <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/en/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    </div>
+    <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/en/categories/Study-note/AI-transform-version/">AI transform version</a>
+    </div>
+</div>
+        <section class="archives-wrap" data-aos="fade-up">
+          <div class="archive-year-wrap">
+            <a href="/en/archives/2026" class="archive-year">2026</a>
+          </div>
+          <ul>
+            <li class="archive-article">
+  <div class="archive-article-date">
+    <span>
+      <time class="dt-published" datetime="2026-05-30T16:02:01.000Z" itemprop="datePublished">05-31</time>
+    </span>
   </div>
-    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
-      <div class="article-nav-link-wrap left">
-          <img data-src="/images/zd1.png" data-sizes="auto" alt="第二章：重整化" class="lazyload">
-        <a href="/2026/05/31/QFT-II-Note-chap2/" aria-label="Prev: 第二章：重整化" title="Prev: 第二章：重整化"></a>
-        <div class="article-nav-caption">Prev</div>
-        <h3 class="article-nav-title">
-            第二章：重整化
-        </h3>
-      </div>
-    <div class="article-nav-link-wrap right">
-        <img data-src="/images/paimon.jpg" data-sizes="auto" alt="QFT II 笔记目录" class="lazyload">
-      <a href="/2026/05/31/QFT-II-Note-catalogue/" aria-label="Next: QFT II 笔记目录"  title="Next: QFT II 笔记目录"></a>
-      <div class="article-nav-caption">Next</div>
-      <h3 class="article-nav-title">
-          QFT II 笔记目录
-      </h3>
-    </div>
-  </nav>
+    <a class="archive-article-title" href="/en/2026/05/31/QFT2Chap3/">Chapter 3：Gauge Field Theory</a>
+</li>
 
-</article>
+            <li class="archive-article">
+  <div class="archive-article-date">
+    <span>
+      <time class="dt-published" datetime="2026-05-30T16:02:00.000Z" itemprop="datePublished">05-31</time>
+    </span>
+  </div>
+    <a class="archive-article-title" href="/en/2026/05/31/QFT2Chap2/">Chapter 2： Renormalization</a>
+</li>
 
+            <li class="archive-article">
+  <div class="archive-article-date">
+    <span>
+      <time class="dt-published" datetime="2026-05-30T16:01:00.000Z" itemprop="datePublished">05-31</time>
+    </span>
+  </div>
+    <a class="archive-article-title" href="/en/2026/05/31/QFT2Chap1/">Chapter 1：Path Integral</a>
+</li>
+
+            <li class="archive-article">
+  <div class="archive-article-date">
+    <span>
+      <time class="dt-published" datetime="2026-05-30T16:00:00.000Z" itemprop="datePublished">05-31</time>
+    </span>
+  </div>
+    <a class="archive-article-title" href="/en/2026/05/31/QFT2cata/">QFT II Catalogue</a>
+</li>
+
+          </ul>
+        </section>
+  </div>
 
 </section>
         </div>
@@ -275,10 +348,10 @@
       </div>
       <div>
         <span class="icon-brush"></span>
-        314
+        568
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:06
+        00:12
       </div>
       <div>
         <span class="icon-eye"></span>
@@ -298,12 +371,7 @@
       </div>
       <nav id="mobile-nav" aria-label="Mobile navigation">
   <div class="sidebar-wrap">
-        <div class="sidebar-toc-sidebar"><h3 class="toc-title">Contents</h3>
-<div class="sidebar-toc-wrapper toc-div-class" >
-    
-</div>
-</div>
-        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
+      <div class="sidebar-author">
   <img data-src="/avatar/head.jpg" data-sizes="auto" alt="洛蘅" class="lazyload">
   <div class="sidebar-author-name">洛蘅</div>
   <div class="sidebar-description">迎风奔跑，越过瓦砾！</div>
@@ -311,15 +379,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>Post</div>
-    <div class="sidebar-state-number">6</div>
+    <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
     <div>Category</div>
-    <div class="sidebar-state-number">2</div>
+    <div class="sidebar-state-number">5</div>
   </div>
   <div class="sidebar-state-tag">
     <div>Tag</div>
-    <div class="sidebar-state-number">3</div>
+    <div class="sidebar-state-number">7</div>
   </div>
 </div>
 <div class="sidebar-social" >
@@ -329,40 +397,36 @@
 </div>
 <div class="sidebar-menu">
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="主页"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/" aria-label="Home"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">主页</div>
+        <div class="sidebar-menu-link">Home</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="文章和链接"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/archives" aria-label="Archives"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">文章和链接</div>
+        <div class="sidebar-menu-link">Archives</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于我"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/about" aria-label="About"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">关于我</div>
+        <div class="sidebar-menu-link">About</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="博客主题下载"></a>
+        <a class="sidebar-menu-link-dummy" href="/en/friend" aria-label="Friend"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">博客主题下载</div>
+        <div class="sidebar-menu-link">Friend</div>
       </div>
 </div>
-</div>
+
   </div>
-      <div class="sidebar-btn-wrapper">
-        <div class="sidebar-toc-btn current"></div>
-        <div class="sidebar-common-btn"></div>
-      </div>
 </nav>
 
     </div>
@@ -420,49 +484,6 @@
 
 <div id="lazy-script">
   <div>
-      
-      
-      <script data-pjax>
-        window.REIMU_POST = {
-          author: "洛蘅",
-          title: "第一章：路径积分",
-          url: "https://luohengallen.github.io/2026/05/31/QFT-II-Note-chap1/",
-          excerpt: "",
-          description: "",
-          stripContent: "第一章路径积分已经更新完了，这个笔记主要是follow我们上课讲义，以及Peskin教材             👉 点击这里下载 PDF ",
-          date: "Sun May 31 2026 00:01:00 GMT+0800",
-          updated: "Sun May 31 2026 17:18:42 GMT+0800",
-          cover: "/images/eva1.jpg",
-        };
-      </script>
-        
-<script src="/js/insert_highlight.js" data-pjax></script>
-
-      
-<script src="/js/tabs.js" data-pjax defer></script>
-
-      <script type="module" data-pjax>
-        (async () => {
-          const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
-          const initPswp = (gallery, children) => {
-            if (_$$(`${gallery} ${children}`).length > 0) {
-              new PhotoSwipeLightbox({
-                gallery,
-                children,
-                pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
-              }).init();
-            }
-          }
-          const pswp = () => {
-            initPswp('.article-entry', 'a.article-gallery-item');
-            initPswp('.article-gallery', 'a.article-gallery-item');
-          }
-          pswp();
-        })();
-      </script>
-        
-
-
   </div>
 </div>
 

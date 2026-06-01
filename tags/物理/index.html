@@ -1,5 +1,5 @@
   <!DOCTYPE html>
-  <html lang="en"  
+  <html lang="zh-CN"  
       data-theme-mode="auto"
   >
   <head>
@@ -7,9 +7,9 @@
   
   
   
-  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_ex15nbittbh';window.REIMU_CONFIG.clipboard_tips = {"success":{"en":"Copy successfully (*^▽^*)"},"fail":{"en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = 'All articles on this blog are licensed under the BY-NC-SA license agreement unless otherwise stated. Please indicate the source when reprinting!';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://luohengallen.github.io';window.REIMU_CONFIG.relative = '/';</script>
+  <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_ex15nbittbh';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://luohengallen.github.io';window.REIMU_CONFIG.relative = '/';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
   <title>
-    Tag: 物理 | 洛蘅的个人空间
+    标签: 物理 | 洛蘅的个人空间
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
@@ -45,7 +45,7 @@
            M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95z" fill="var(--red-1, #ff5252)" />
           </svg>
       </div>
-      <div class="loading-word">Loading...</div>
+      <div class="loading-word">少女祈祷中...</div>
     </div>
   </div>
   <script>
@@ -88,31 +88,77 @@
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">主页</span>
+          <span class="main-nav-link">首页</span>
         </a>
         <a class="main-nav-link-wrap" href="/archives">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">文章和链接</span>
+          <span class="main-nav-link">归档</span>
         </a>
         <a class="main-nav-link-wrap" href="/about">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">关于我</span>
+          <span class="main-nav-link">关于</span>
         </a>
         <a class="main-nav-link-wrap" href="/friend">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
-          <span class="main-nav-link">博客主题下载</span>
+          <span class="main-nav-link">友链</span>
         </a>
     <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation">
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" aria-label="RSS Feed" target="_blank"></a>
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅" aria-label="RSS 订阅" target="_blank"></a>
   </nav>
+    <nav id="i18n-nav" aria-label="Language selection">
+      <div class="custom-dropdown">
+        <div class="select-selected" id="select-selected" role="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language menu">
+          <span id="nav-language-btn" class="nav-icon" style="padding: 0 20px 0 0"></span>
+          <span id="selected-lang">简体中文</span>
+        </div>
+        <ul class="select-items" id="select-items" role="listbox" aria-label="Languages">
+            <li data-value="zh-CN" role="option" class="selected" aria-selected="true">简体中文</li>
+            <li data-value="en" role="option" aria-selected="false">English</li>
+        </ul>
+      </div>
+      <script>
+        var selectSelected = document.getElementById("select-selected");
+        var selectedLang = document.getElementById("selected-lang");
+        var selectItems = document.getElementById("select-items");
+        var selectOptions = selectItems.querySelectorAll("li");
+
+        selectSelected.addEventListener("click", () => {
+          selectItems.classList.toggle("show");
+          var expanded = selectSelected.getAttribute("aria-expanded") === "true";
+          selectSelected.setAttribute("aria-expanded", (!expanded).toString());
+        });
+
+        selectOptions.forEach((item) => {
+          item.addEventListener("click", () => {
+            const langMap = {};
+              langMap['zh-CN'] = '/tags/物理/';
+              langMap['en'] = '/en/tags/物理/';
+            selectedLang.textContent = item.textContent;
+            selectItems.classList.remove("show");
+            selectOptions.forEach((option) => {
+              option.classList.remove("selected");
+            });
+            item.classList.add("selected");
+            window.location = langMap[item.dataset.value];
+          });
+        });
+
+        document.addEventListener("click", (event) => {
+          if (!event.target.closest(".custom-dropdown")) {
+            selectItems.classList.remove("show");
+            selectSelected.setAttribute("aria-expanded", "false");
+          }
+        });
+      </script>
+    </nav>
 </div>
 <header id="header" aria-label="Site header">
       <picture>
@@ -121,7 +167,7 @@
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">Tags</h1>
+            <h1 data-aos="slide-up">标签</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
               <span id="subtitle">物理</span>
@@ -142,16 +188,16 @@
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Post</div>
-    <div class="sidebar-state-number">6</div>
+    <div>文章</div>
+    <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
-    <div>Category</div>
-    <div class="sidebar-state-number">2</div>
+    <div>分类</div>
+    <div class="sidebar-state-number">5</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>Tag</div>
-    <div class="sidebar-state-number">3</div>
+    <div>标签</div>
+    <div class="sidebar-state-number">7</div>
   </div>
 </div>
 <div class="sidebar-social" >
@@ -161,32 +207,32 @@
 </div>
 <div class="sidebar-menu">
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="主页"></a>
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">主页</div>
+        <div class="sidebar-menu-link">首页</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="文章和链接"></a>
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">文章和链接</div>
+        <div class="sidebar-menu-link">归档</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于我"></a>
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">关于我</div>
+        <div class="sidebar-menu-link">关于</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="博客主题下载"></a>
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">博客主题下载</div>
+        <div class="sidebar-menu-link">友链</div>
       </div>
 </div>
 
@@ -203,6 +249,18 @@
       <a class="archives-tag-list-link" href="/tags/Lie%E7%BE%A4%EF%BC%8CLie%E4%BB%A3%E6%95%B0%EF%BC%8C%E7%BE%A4%E8%AE%BA/">Lie群，Lie代数，群论</a>
     </div>
     <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/Lie-group/">Lie group</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/Lie-algebra/">Lie algebra</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/QFT/">QFT</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
+      <a class="archives-tag-list-link" href="/tags/physics/">physics</a>
+    </div>
+    <div class="archives-tag-list-item" data-aos="zoom-in">
       <a class="archives-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/">量子场论</a>
     </div>
     <div class="archives-tag-list-item" data-aos="zoom-in">
@@ -214,7 +272,16 @@
       <a class="archives-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8CAI%E8%BD%AC%E7%A0%81%E7%89%88%E6%9C%AC/">学习笔记，AI转码版本</a>
     </div>
     <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/categories/Study-note/">Study note</a>
+    </div>
+    <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/categories/study-note/">study note</a>
+    </div>
+    <div class="archives-category-list-item" data-aos="zoom-in">
       <a class="archives-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+    </div>
+    <div class="archives-category-list-item" data-aos="zoom-in">
+      <a class="archives-category-list-link" href="/categories/Study-note/AI-transform-version/">AI transform version</a>
     </div>
 </div>
         <section class="archives-wrap" data-aos="fade-up">
@@ -228,7 +295,7 @@
       <time class="dt-published" datetime="2026-05-30T16:02:01.000Z" itemprop="datePublished">05-31</time>
     </span>
   </div>
-    <a class="archive-article-title" href="/2026/05/31/QFT-II-Note-chap3/">第三章：非阿贝尔规范场</a>
+    <a class="archive-article-title" href="/2026/05/31/QFT2Chap3/">第三章：非阿贝尔规范场</a>
 </li>
 
             <li class="archive-article">
@@ -237,7 +304,7 @@
       <time class="dt-published" datetime="2026-05-30T16:02:00.000Z" itemprop="datePublished">05-31</time>
     </span>
   </div>
-    <a class="archive-article-title" href="/2026/05/31/QFT-II-Note-chap2/">第二章：重整化</a>
+    <a class="archive-article-title" href="/2026/05/31/QFT2Chap2/">第二章：重整化</a>
 </li>
 
             <li class="archive-article">
@@ -246,7 +313,7 @@
       <time class="dt-published" datetime="2026-05-30T16:01:00.000Z" itemprop="datePublished">05-31</time>
     </span>
   </div>
-    <a class="archive-article-title" href="/2026/05/31/QFT-II-Note-chap1/">第一章：路径积分</a>
+    <a class="archive-article-title" href="/2026/05/31/QFT2Chap1/">第一章：路径积分</a>
 </li>
 
             <li class="archive-article">
@@ -255,7 +322,7 @@
       <time class="dt-published" datetime="2026-05-30T16:00:00.000Z" itemprop="datePublished">05-31</time>
     </span>
   </div>
-    <a class="archive-article-title" href="/2026/05/31/QFT-II-Note-catalogue/">QFT II 笔记目录</a>
+    <a class="archive-article-title" href="/2026/05/31/QFT2cata/">QFT II 笔记目录</a>
 </li>
 
           </ul>
@@ -276,22 +343,22 @@
       洛蘅
     </div>
       <div>
-        Powered by&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
+        基于&nbsp;<a href="https://hexo.io/" rel="noopener nofollow noreferrer" target="_blank">Hexo</a>&nbsp;
         Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" rel="noopener nofollow noreferrer" target="_blank">Reimu</a>
       </div>
       <div>
         <span class="icon-brush"></span>
-        314
+        568
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:06
+        00:12
       </div>
       <div>
         <span class="icon-eye"></span>
-        <span id="busuanzi_container_site_pv">Number of visits&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+        <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
         &nbsp;|&nbsp;
         <span class="icon-user"></span>
-        <span id="busuanzi_container_site_uv">Number of visitors&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+        <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
       </div>
   </div>
 </footer>
@@ -311,16 +378,16 @@
 </div>
 <div class="sidebar-state">
   <div class="sidebar-state-article">
-    <div>Post</div>
-    <div class="sidebar-state-number">6</div>
+    <div>文章</div>
+    <div class="sidebar-state-number">12</div>
   </div>
   <div class="sidebar-state-category">
-    <div>Category</div>
-    <div class="sidebar-state-number">2</div>
+    <div>分类</div>
+    <div class="sidebar-state-number">5</div>
   </div>
   <div class="sidebar-state-tag">
-    <div>Tag</div>
-    <div class="sidebar-state-number">3</div>
+    <div>标签</div>
+    <div class="sidebar-state-number">7</div>
   </div>
 </div>
 <div class="sidebar-social" >
@@ -330,32 +397,32 @@
 </div>
 <div class="sidebar-menu">
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/" aria-label="主页"></a>
+        <a class="sidebar-menu-link-dummy" href="/" aria-label="首页"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">主页</div>
+        <div class="sidebar-menu-link">首页</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="文章和链接"></a>
+        <a class="sidebar-menu-link-dummy" href="/archives" aria-label="归档"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">文章和链接</div>
+        <div class="sidebar-menu-link">归档</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于我"></a>
+        <a class="sidebar-menu-link-dummy" href="/about" aria-label="关于"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">关于我</div>
+        <div class="sidebar-menu-link">关于</div>
       </div>
       <div class="sidebar-menu-link-wrap">
-        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="博客主题下载"></a>
+        <a class="sidebar-menu-link-dummy" href="/friend" aria-label="友链"></a>
           <div class="sidebar-menu-icon icon rotate">
               &#xe62b;
           </div>
-        <div class="sidebar-menu-link">博客主题下载</div>
+        <div class="sidebar-menu-link">友链</div>
       </div>
 </div>
 
