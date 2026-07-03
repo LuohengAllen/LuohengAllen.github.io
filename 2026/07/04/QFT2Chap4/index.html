@@ -9,7 +9,7 @@
   
   <script>window.REIMU_CONFIG = {};window.REIMU_CONFIG.icon_font = '4552607_ex15nbittbh';window.REIMU_CONFIG.clipboard_tips = {"success":{"zh-CN":"复制成功 (*^▽^*)","en":"Copy successfully (*^▽^*)"},"fail":{"zh-CN":"复制失败 (ﾟ⊿ﾟ)ﾂ","en":"Copy failed (ﾟ⊿ﾟ)ﾂ"},"copyright":{"enable":false,"count":50,"license_type":"by-nc-sa"}};window.REIMU_CONFIG.clipboard_tips.copyright.content = '本博客所有文章除特别声明外，均采用 BY-NC-SA 许可协议。转载请注明出处！';window.REIMU_CONFIG.code_block = {"expand":true};window.REIMU_CONFIG.base = 'https://luohengallen.github.io';window.REIMU_CONFIG.relative = '/';window.REIMU_CONFIG.i18n_languages = ["en"];</script>
   <title>
-    归档: 2026/6 | 洛蘅的个人空间
+    第四章：标准模型 | 洛蘅的个人空间
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:400,400italic,700,700italic|Noto Serif SC:400,400italic,700,700italic&display=swap" media="print" onload="this.media='all'">
@@ -139,8 +139,8 @@
         selectOptions.forEach((item) => {
           item.addEventListener("click", () => {
             const langMap = {};
-              langMap['zh-CN'] = '/archives/2026/06/';
-              langMap['en'] = '/en/archives/2026/06/';
+              langMap['zh-CN'] = '/2026/07/04/QFT2Chap4/';
+              langMap['en'] = '/en/2026/07/04/QFT2Chap4/';
             selectedLang.textContent = item.textContent;
             selectItems.classList.remove("show");
             selectOptions.forEach((option) => {
@@ -161,16 +161,14 @@
     </nav>
 </div>
 <header id="header" aria-label="Site header">
-      <picture>
-      </picture>
-        <img  fetchpriority="high" src="/images/bg.jpg" alt="">
+    <picture></picture>
+    <img  fetchpriority="high" src="/images/zd2.jpg" alt="第四章：标准模型">
   <div id="header-outer">
     <div id="header-title">
           <span id="logo">
-            <h1 data-aos="slide-up">文章和链接</h1>
+            <h1 data-aos="slide-up">第四章：标准模型</h1>
           </span>
         <h2 id="subtitle-wrap" data-aos="slide-down">
-              <span id="subtitle">2026/6</span>
         </h2>
     </div>
   </div>
@@ -178,10 +176,15 @@
 
         <div id="content" aria-label="Page content"  class="sidebar-right" >
           <aside id="sidebar" aria-label="Sidebar">
-  <div class="sidebar-wrapper-container ">
+  <div class="sidebar-wrapper-container sticky">
   <div class="sidebar-wrapper">
     <div class="sidebar-wrap" data-aos="fade-up">
-        <div class="sidebar-author">
+          <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    
+</div>
+</div>
+          <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/head.jpg" data-sizes="auto" alt="洛蘅" class="lazyload">
   <div class="sidebar-author-name">洛蘅</div>
   <div class="sidebar-description">迎风奔跑，越过瓦砾！</div>
@@ -235,7 +238,11 @@
         <div class="sidebar-menu-link">博客主题下载</div>
       </div>
 </div>
-
+</div>
+          <div class="sidebar-btn-wrapper" style="position:static">
+            <div class="sidebar-toc-btn current"></div>
+            <div class="sidebar-common-btn"></div>
+          </div>
     </div>
   </div>
   <div class="sidebar-widget">
@@ -243,100 +250,67 @@
   </div>
 </aside>
 
-          <section id="main" aria-label="Main content"><div class="archives-outer-wrap" data-aos="fade-up">
-    <div class="tag-wrap">
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/Lie%E7%BE%A4%EF%BC%8CLie%E4%BB%A3%E6%95%B0%EF%BC%8C%E7%BE%A4%E8%AE%BA/">Lie群，Lie代数，群论</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/Lie-group/">Lie group</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/Lie-algebra/">Lie algebra</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/QFT/">QFT</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/physics/">physics</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/">量子场论</a>
-    </div>
-    <div class="archives-tag-list-item" data-aos="zoom-in">
-      <a class="archives-tag-list-link" href="/tags/%E7%89%A9%E7%90%86/">物理</a>
-    </div>
+          <section id="main" aria-label="Main content"><article id="post-QFT-II-Note-chap4" class="h-entry article" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-inner" data-aos="fade-up">
+    <div class="article-meta">
+      <div class="article-date">
+  <span class="article-date-link icon-calendar" data-aos="zoom-in">
+    <time datetime="2026-07-03T16:02:01.000Z" itemprop="datePublished">2026-07-04</time>
+    <time style="display: none;" id="post-update-time">2026-07-04</time>
+  </span>
 </div>
-<div class="category-wrap">
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%8CAI%E8%BD%AC%E7%A0%81%E7%89%88%E6%9C%AC/">学习笔记，AI转码版本</a>
+
     </div>
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/Study-note/">Study note</a>
-    </div>
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/study-note/">study note</a>
-    </div>
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/Study-note/AI-transform-version/">AI transform version</a>
-    </div>
-    <div class="archives-category-list-item" data-aos="zoom-in">
-      <a class="archives-category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-    </div>
+    
+    <div class="hr-line"></div>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+        <p>最后一章，因为要备考期末基本上都是用AI生成的</p>
+<div style="text-align: center; margin: 20px 0;">
+    <iframe src="/pdfs/QFT-II-Note-chap4.pdf" width="100%" height="800px" style="border: none; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+    </iframe>
 </div>
-        <section class="archives-wrap" data-aos="fade-up">
-          <div class="archive-year-wrap">
-            <a href="/archives/2026" class="archive-year">2026</a>
+<p>👉 <a href="/pdfs/QFT-II-Note-chap4.pdf">点击这里下载 PDF</a></p>
+
+    </div>
+    <footer class="article-footer">
+        <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="学习笔记" data-aos="zoom-in">学习笔记</a>
+
+        <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E7%89%A9%E7%90%86/" rel="tag" title="物理">物理</a></li><li class="article-tag-list-item" data-aos="zoom-in"><a class="article-tag-list-link" href="/tags/%E9%87%8F%E5%AD%90%E5%9C%BA%E8%AE%BA/" rel="tag" title="量子场论">量子场论</a></li></ul>
+
+    </footer>
+  </div>
+    <nav id="article-nav" aria-label="Article navigation" data-aos="fade-up">
+    <div class="article-nav-link-wrap right">
+        <img data-src="/images/paimon.jpg" data-sizes="auto" alt="QFT II 笔记 (完整版)" class="lazyload">
+      <a href="/2026/07/04/QFT2cata/" aria-label="后一篇: QFT II 笔记 (完整版)"  title="后一篇: QFT II 笔记 (完整版)"></a>
+      <div class="article-nav-caption">后一篇</div>
+      <h3 class="article-nav-title">
+          QFT II 笔记 (完整版)
+      </h3>
+    </div>
+  </nav>
+
+</article>
+
+  <section id="comments" data-aos="fade-up">
+    <div class="comment-header">
+        
+      <h2 class="comment-title">说些什么吧！</h2>
+      <div class="comment-selector">
+        <div class="comment-selector-wrap">
+            <div class="selector-item" data-selector="giscus">
+              <span>giscus</span>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="comment-content">
+          <div class="comment giscus-comment" data-aos="fade-up"
+            id="giscus-comment">
           </div>
-          <ul>
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-06-18T16:02:01.000Z" itemprop="datePublished">06-19</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/06/19/QFT2Chap3/">第三章：非阿贝尔规范场</a>
-</li>
-
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-06-13T19:39:56.000Z" itemprop="datePublished">06-14</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/06/14/QFT2renormalization/">重整化入门</a>
-</li>
-
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-06-01T19:24:34.000Z" itemprop="datePublished">06-02</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/06/02/LieGroupCata/">Lie群Lie代数目录</a>
-</li>
-
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-05-31T21:39:19.000Z" itemprop="datePublished">06-01</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/06/01/LieGroupChap2/">Lie群&amp;Lie代数笔记 第二章 矩阵群</a>
-</li>
-
-            <li class="archive-article">
-  <div class="archive-article-date">
-    <span>
-      <time class="dt-published" datetime="2026-05-31T18:41:22.000Z" itemprop="datePublished">06-01</time>
-    </span>
-  </div>
-    <a class="archive-article-title" href="/2026/06/01/LieGroupChap1/">Lie群&amp;Lie代数笔记 第一章 群的基本概念和性质</a>
-</li>
-
-          </ul>
-        </section>
-  </div>
+    </div>
+  </section>
 
 </section>
         </div>
@@ -380,7 +354,12 @@
       </div>
       <nav id="mobile-nav" aria-label="Mobile navigation">
   <div class="sidebar-wrap">
-      <div class="sidebar-author">
+        <div class="sidebar-toc-sidebar"><h3 class="toc-title">文章目录</h3>
+<div class="sidebar-toc-wrapper toc-div-class" >
+    
+</div>
+</div>
+        <div class="sidebar-common-sidebar hidden"><div class="sidebar-author">
   <img data-src="/avatar/head.jpg" data-sizes="auto" alt="洛蘅" class="lazyload">
   <div class="sidebar-author-name">洛蘅</div>
   <div class="sidebar-description">迎风奔跑，越过瓦砾！</div>
@@ -434,8 +413,12 @@
         <div class="sidebar-menu-link">博客主题下载</div>
       </div>
 </div>
-
+</div>
   </div>
+      <div class="sidebar-btn-wrapper">
+        <div class="sidebar-toc-btn current"></div>
+        <div class="sidebar-common-btn"></div>
+      </div>
 </nav>
 
     </div>
@@ -493,6 +476,248 @@
 
 <div id="lazy-script">
   <div>
+      
+      
+      <script data-pjax>
+        window.REIMU_POST = {
+          author: "洛蘅",
+          title: "第四章：标准模型",
+          url: "https://luohengallen.github.io/2026/07/04/QFT2Chap4/",
+          excerpt: "",
+          description: "",
+          stripContent: "最后一章，因为要备考期末基本上都是用AI生成的             👉 点击这里下载 PDF ",
+          date: "Sat Jul 04 2026 00:02:01 GMT+0800",
+          updated: "Sat Jul 04 2026 05:11:08 GMT+0800",
+          cover: "/images/zd2.jpg",
+        };
+      </script>
+        
+<script src="/js/insert_highlight.js" data-pjax></script>
+
+      
+<script src="/js/tabs.js" data-pjax defer></script>
+
+      <script type="module" data-pjax>
+        (async () => {
+          const PhotoSwipeLightbox = (await safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe-lightbox.esm.min.js", "sha384-DiL6M/gG+wmTxmCRZyD1zee6lIhawn5TGvED0FOh7fXcN9B0aZ9dexSF/N6lrZi/")).default;
+          const initPswp = (gallery, children) => {
+            if (_$$(`${gallery} ${children}`).length > 0) {
+              new PhotoSwipeLightbox({
+                gallery,
+                children,
+                pswpModule: () => safeImport("https://npm.webcache.cn/photoswipe@5.4.4/dist/photoswipe.esm.min.js", "sha384-WkkO3GCmgkC3VQWpaV8DqhKJqpzpF9JoByxDmnV8+oTJ7m3DfYEWX1fu1scuS4+s")
+              }).init();
+            }
+          }
+          const pswp = () => {
+            initPswp('.article-entry', 'a.article-gallery-item');
+            initPswp('.article-gallery', 'a.article-gallery-item');
+          }
+          pswp();
+        })();
+      </script>
+        
+
+<script data-pjax>
+  var loadScript = (src, integrity) => {
+    const script = document.createElement('script');
+    script.src = src;
+    if (integrity) script.integrity = integrity;
+    script.crossOrigin = 'anonymous';
+    return script;
+  };
+
+  var commentConfigKeys = ["giscus"];
+  var commentConfig = {
+    giscus: {
+      enable: true,
+      load: async () => {
+        const container = document.querySelector('.giscus-comment');
+        if (!container) return;
+        container.style.display = 'block';
+
+        // 删除可能已存在的 giscus 脚本和 iframe
+        const existingScript = container.querySelector('script[src*="giscus.app/client.js"]');
+        if (existingScript) existingScript.remove();
+        const existingFrame = document.querySelector('iframe.giscus-frame');
+        if (existingFrame) existingFrame.remove();
+
+        const giscusScript = document.createElement('script');
+        const domMode = document.documentElement.getAttribute("data-theme");
+        const defaultTheme = { dark: 'dark', light: 'light' };
+        const customTheme = {
+          dark: 'preferred_color_scheme' ? 'preferred_color_scheme' : new URL('/css/giscus_reimu_dark.css', window.location.origin).href,
+          light:'preferred_color_scheme' ? 'preferred_color_scheme' : new URL('/css/giscus_reimu_light.css', window.location.origin).href
+        }; 
+        const hasGiscusCorsHeader = async (url) => {
+          if (!url) return false;
+          if (!url.startsWith('http')) return true; // not a url, maybe a name of built-in theme
+          try {
+            let response = await fetch(url, { method: 'HEAD', cache: 'no-store' });
+            if (response.status === 405) {
+              response = await fetch(url, { method: 'GET', cache: 'no-store' });
+            }
+            const allowOrigin = response.headers.get('access-control-allow-origin') || '';
+            return allowOrigin === '*' || allowOrigin.split(',').map(value => value.trim()).includes('https://giscus.app');
+          } catch {
+            return false;
+          }
+        };
+        let giscusTheme = defaultTheme;
+        const [darkCorsOk, lightCorsOk] = await Promise.all([
+          hasGiscusCorsHeader(customTheme.dark),
+          hasGiscusCorsHeader(customTheme.light)
+        ]);
+        if (darkCorsOk && lightCorsOk) {
+          giscusTheme = customTheme;
+        }
+
+        const docLang = document.documentElement.lang || 'en';
+        const langBase = docLang.split('-')[0];
+        const supportedLangs = ['ar', 'be', 'bg', 'ca', 'cs', 'da', 'de', 'en', 
+        'eo', 'es', 'eu', 'fa', 'fr', 'gr', 'hbs', 'he', 'hu', 'id', 'it', 'ja', 
+        'kh', 'ko', 'nl', 'pl', 'pt', 'ro', 'ru', 'th', 'tr', 'uk', 'uz', 'vi', 'zh-CN', 'zh-HK', 'zh-TW'];
+        const giscusLang = supportedLangs.includes(docLang) ? docLang : supportedLangs.includes(langBase) ? langBase : 'en';
+
+        giscusScript.src = 'https://giscus.app/client.js';
+        giscusScript.setAttribute('data-repo', 'luohengallen/luohengallen.github.io');
+        giscusScript.setAttribute('data-repo-id', 'R_kgDOSsSDCQ');
+        giscusScript.setAttribute('data-category', 'Announcements'); 
+        giscusScript.setAttribute('data-category-id', 'DIC_kwDOSsSDCc4C-Tjb');
+        giscusScript.setAttribute('data-mapping', '0');
+        giscusScript.setAttribute('data-strict', '0');
+        giscusScript.setAttribute('data-reactions-enabled', '1');
+        giscusScript.setAttribute('data-emit-metadata', '0');
+        giscusScript.setAttribute('data-input-position', 'bottom');
+        giscusScript.setAttribute('data-theme', domMode === 'dark' ? giscusTheme.dark : giscusTheme.light);
+        giscusScript.setAttribute('data-lang', giscusLang);
+        giscusScript.setAttribute('crossorigin', 'anonymous');
+        giscusScript.async = true;
+        container.appendChild(giscusScript);
+        const themeHandler = (e) => {
+          const isDark = e.detail.isDark;
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe || !iframe.contentWindow) {
+            document.body.removeEventListener('reimu:theme-set', themeHandler);
+            return;
+          }
+          iframe.contentWindow.postMessage({ giscus: { setConfig: { theme: isDark ? giscusTheme.dark : giscusTheme.light } } }, 'https://giscus.app');
+        };
+        document.body.addEventListener('reimu:theme-set', themeHandler);
+      }
+    },
+  }
+  commentConfig.enable = commentConfigKeys.some(key => commentConfig[key].enable);
+
+  var defaultComment = '';
+  if (commentConfig.enable) {
+    // 1. 首先检查localStorage中是否有保存的评论类型
+    var savedCommentType = localStorage.getItem('commentType');
+    
+    // 2. 如果localStorage中有值且对应的评论系统可用，就使用它
+    if (savedCommentType) {
+      if (commentConfig[savedCommentType]?.enable) {
+        defaultComment = savedCommentType;
+      }
+    }
+    
+    // 3. 如果localStorage无效，检查配置的默认评论系统
+    if (!defaultComment) {
+      var configDefault = 'waline';
+      if (commentConfig[configDefault]?.enable) {
+        defaultComment = configDefault;
+      }
+    }
+    
+    // 4. 如果前两项都无效，按指定顺序找到第一个可用的评论系统
+    if (!defaultComment) {
+      defaultComment = commentConfigKeys.find(sys => commentConfig[sys].enable) || '';
+    }
+  }
+  function loadComments() {
+    if (!commentConfig.enable) return;
+    const loadedComments = {
+      valine: false,
+      waline: false,
+      twikoo: false,
+      gitalk: false,
+      giscus: false,
+      utterances: false,
+      beaudar: false,
+      disqus: false,
+    };
+
+    // 隐藏所有评论容器
+    const hideAllComments = () => {
+      const commentContainers = document.querySelectorAll('.comment');
+      commentContainers.forEach(container => {
+        container.style.display = 'none';
+      });
+    };
+
+    // 按需加载评论系统
+    const loadCommentSystem = (type) => {
+      if (loadedComments[type]) {
+        // 如果已加载，只需显示对应容器
+        document.querySelector(`.${type}-comment`).style.display = 'block';
+        return;
+      }
+
+      // 根据类型加载对应的脚本
+      commentConfig[type]?.load();
+      loadedComments[type] = true;
+    };
+
+    // 评论组件选择器
+    const changeActiveCommentItems = (item) => {
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let i = 0; i < commentItems.length; i++) {
+        commentItems[i].classList.remove('active');
+      }
+      item.classList.add('active');
+
+      // 获取要加载的评论系统类型
+      const commentType = item.getAttribute('data-selector');
+
+      // 隐藏所有评论系统
+      hideAllComments();
+
+      // 加载选中的评论系统
+      loadCommentSystem(commentType);
+    };
+
+    const commentInit = () => {
+      // 评论组件选择器点击事件
+      const commentItems = document.querySelectorAll('.selector-item');
+      for (let item of commentItems) {
+        item.addEventListener('click', () => {
+          // 保存选择器状态
+          const commentType = item.getAttribute('data-selector');
+          window.localStorage.setItem('commentType', commentType);
+          // 切换选中状态
+          changeActiveCommentItems(item);
+        });
+      }
+
+      // 检查是否需要加载默认评论系统
+      if (defaultComment) {
+        const defaultSelectorItem = document.querySelector(`[data-selector="${defaultComment}"]`);
+        if (!defaultSelectorItem) return;
+        defaultSelectorItem.style.display = 'block';
+        defaultSelectorItem.classList.add('active');
+        loadCommentSystem(defaultComment);
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', commentInit);
+    } else {
+      commentInit();
+    }
+  };
+  loadComments();
+</script>
+
   </div>
 </div>
 
